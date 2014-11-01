@@ -14,15 +14,27 @@ module.exports = function(grunt) {
                 }
             }
         },
+        cssmin: {
+            minify: {
+                files: [{
+                    expand: true,
+                    cwd: './assets/css/',
+                    src: ['*.css', '!*.min.css'],
+                    dest: './assets/css/',
+                    ext: '.min.css'
+                }]
+            }
+        },
         watch: {
             files: [
                 "./assets/less/bootstrap/*",
                 "./assets/less/core/*",
                 "./assets/less/themes/*"
             ],
-            tasks: ["less"]
+            tasks: ["less", "cssmin"]
         }
     });
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
