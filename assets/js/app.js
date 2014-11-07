@@ -108,27 +108,32 @@ teamText = {
     'TITLE' : 'Notre Équipe',
     'DESC' : 'Le groupe est constitué d\'étudiants en génie mécanique, électrique et informatique. Chaque membre de l\'équipe joue un rôle essentiel à la réussite du projet',
     'MEMBER1' : {
+      'ROLESHORT' : 'Capitaine',
       'ROLE' : 'Capitaine',
       'DESC' : 'Étudiant en Génie électrique de la 57e promotion, Jacob a été impliqué dans le développement de drones à l\'Université de Sherbrooke pour plus de 2 ans où il a récolté de nombreuses victoires. Il a également participé au UAV Outback Challenge en Australie',
       'SKILL' : 'Il peut faire des PCBs plus vite que son ombre'
     },
     'MEMBER2' : {
-      'ROLE' : 'Imagerie',
+      'ROLESHORT' : 'Imagerie',
+      'ROLE' : 'Spécialiste Charge Utile',
       'DESC' : 'Étudiant en Génie informatique de la 56e promotion, il est passionné par tous les projets techniques. Il a été pendant plusieurs années dans le groupe de drones de l\'Université de Sherbrooke où son savoir-faire leur a permis de développer un système d\'imagerie révolutionnaire avec lequel il a gagné de nombreux prix',
       'SKILL' : 'Il crée des applications mobiles sans les mains'
     },
     'MEMBER3' : {
-      'ROLE' : 'Cartographie',
+      'ROLESHORT' : 'Cartographie',
+      'ROLE' : 'Spécialiste en cartographie',
       'DESC' : 'Étudiant en Génie informatique de la 57e promotion, il a fait des drones à l\'Université Laval avant de rejoindre le groupe de l\'Université de Sherbrooke et d\'y gagner les compétitions AUVSI et USC. Il a même géré le groupe qui a participé au UAV Outback Challenge',
       'SKILL' : 'Oui, il a vraiment un baccalauréat en physique'
     },
     'MEMBER4' : {
-      'ROLE' : 'Aéronautique',
+      'ROLESHORT' : 'Aéronautique',
+      'ROLE' : 'Spécialiste en Aéronautique',
       'DESC' : 'Étudiant en Génie mécanique de la 57e promotion, il a créé les 2 dernières générations de drones de l\'Université de Sherbrooke. Son implication et les performances de ses avions ont apporté l\'Université vers des nouveaux sommets. Dans ses temps libres, il apprend à piloter avec les Forces canadiennes',
       'SKILL' : 'Il transforme le duct-tape et la colle en portance'
     },
     'MEMBER5' : {
-      'ROLE' : 'Systèmes Autonomes',
+      'ROLESHORT' : 'Systèmes Autonomes',
+      'ROLE' : 'Spécialiste en Systèmes Autonomes',
       'DESC' : 'Étudiant en Génie informatique de la 56e promotion, il a été responsable des systèmes autonomes du groupe de drones de l\'Université de Sherbrooke pendant plus de 3 ans. Il a remporté la compétition AUVSI et réalisé un tour du chapeau à la compétition USC.e',
       'SKILL' : 'Il peut piloter un drone les yeux fermés'
     }
