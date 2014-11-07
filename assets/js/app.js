@@ -142,26 +142,31 @@ teamText = {
     'TITLE' : 'Our Team',
     'DESC' : 'Team Desc',
     'MEMBER1' : {
+      'ROLESHORT' : 'ROLE SHORT',
       'ROLE' : 'Role 1',
       'DESC' : 'Desc 1',
       'SKILL' : 'Skill 1'
     },
     'MEMBER2' : {
+      'ROLESHORT' : 'ROLE SHORT',
       'ROLE' : 'Role 2',
       'DESC' : 'Desc 2',
       'SKILL' : 'Skill 2'
     },
     'MEMBER3' : {
+      'ROLESHORT' : 'ROLE SHORT',
       'ROLE' : 'Role 3',
       'DESC' : 'Desc 3',
       'SKILL' : 'Skill 3'
     },
     'MEMBER4' : {
+      'ROLESHORT' : 'ROLE SHORT',
       'ROLE' : 'Role 4',
       'DESC' : 'Desc 4',
       'SKILL' : 'Skill 4'
     },
     'MEMBER5' : {
+      'ROLESHORT' : 'ROLE SHORT',
       'ROLE' : 'Role 5',
       'DESC' : 'Desc 5',
       'SKILL' : 'Skill 5'
