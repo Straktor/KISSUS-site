@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" ng-app="kissApp">
 
 <head>
 
@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body ng-controller="Ctrl">
 
 <div class="site-loader"></div>
 
@@ -54,7 +54,7 @@
 						<div class="col-md-12">
 
 							<div class="splash-text">
-								<h1 class="splash-headline">Projet Simplicité</h1>
+								<h1 class="splash-headline">{{ 'TITLE' | translate }}</h1>
 								<div class="splash-description">
 									<p>
                                       <span class="text-primary">K</span>eep 
@@ -103,13 +103,15 @@
 					<div class="header-col main-nav">
 						<a href="#" class="nav-toggle"></a>
 						<ul class="nav">
-						  <li><a href="#">Accueil</a></li>
-						  <li><a href="#about">Projet</a></li>
-						  <li><a href="#equipe">Notre Équipe</a></li>
-                          <li><a href="#services">Système</a></li>
-                          <li><a href="#competition">Compétition</a></li>
-                          <li><a href="#work">Partenaires</a></li>
-						  <li><a href="#contact">Nous joindre</a></li>
+						  <li><a href="#">{{ 'MENU.ACCUEIL' | translate }}</a></li>
+						  <li><a href="#about">{{ 'MENU.PROJET' | translate }}</a></li>
+						  <li><a href="#equipe">{{ 'MENU.EQUIPE' | translate }}</a></li>
+                          <li><a href="#services">{{ 'MENU.SYSTEM' | translate }}</a></li>
+                          <li><a href="#competition">{{ 'MENU.COMPETITION' | translate }}</a></li>
+                          <li><a href="#work">{{ 'MENU.PARTENAIRES' | translate }}</a></li>
+						  <li><a href="#contact">{{ 'MENU.CONTACT' | translate }}</a></li>
+                          <li><img src="assets/img/fr.png" alt="fr_flag" ng-click="changeLanguage('fr')"/></li>
+                          <li><img src="assets/img/us.png" alt="us_flag" ng-click="changeLanguage('en')"/></li>
 						</ul>
 					</nav>
 
@@ -1047,6 +1049,10 @@ s
 <script type="text/javascript" src="assets/js/hydrogen.setup.min.js"></script>
 <script type="text/javascript" src="assets/js/hydrogen.scripts.min.js"></script>
 <script type="text/javascript" src="assets/js/hydrogen.plugins.js"></script>
+
+<script type="text/javascript" src="assets/js/angular.min.js"></script>
+<script type="text/javascript" src="assets/js/angular-translate.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
 
 <script type="text/javascript" src="assets/plugins/royalslider/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="assets/plugins/mfp/jquery.mfp-0.9.9.min.js"></script>
