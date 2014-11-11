@@ -1,4 +1,4 @@
-/*global angular */
+﻿/*global angular */
 var app = angular.module("kissApp", ['pascalprecht.translate']);
 var menuText, projectText, teamText, quotesText, systemText, competitionText, partnersText, sposorsPlan, contact;
 
@@ -140,34 +140,34 @@ teamText = {
   },
   'EN': {
     'TITLE' : 'Our Team',
-    'DESC' : 'Team Desc',
+    'DESC' : 'The members are students in mechanical, electrical and computer engineering. They all play a vital role in the project',
     'MEMBER1' : {
-      'ROLESHORT' : 'ROLE SHORT',
-      'ROLE' : 'Role 1',
+      'ROLESHORT' : 'Captain',
+      'ROLE' : 'Captain',
       'DESC' : 'Desc 1',
       'SKILL' : 'Skill 1'
     },
     'MEMBER2' : {
-      'ROLESHORT' : 'ROLE SHORT',
-      'ROLE' : 'Role 2',
+      'ROLESHORT' : 'Payload',
+      'ROLE' : 'Payload',
       'DESC' : 'Desc 2',
       'SKILL' : 'Skill 2'
     },
     'MEMBER3' : {
-      'ROLESHORT' : 'ROLE SHORT',
-      'ROLE' : 'Role 3',
+      'ROLESHORT' : 'Payload',
+      'ROLE' : 'Payload',
       'DESC' : 'Desc 3',
       'SKILL' : 'Skill 3'
     },
     'MEMBER4' : {
-      'ROLESHORT' : 'ROLE SHORT',
-      'ROLE' : 'Role 4',
+      'ROLESHORT' : 'Avionics',
+      'ROLE' : 'Avionics',
       'DESC' : 'Desc 4',
       'SKILL' : 'Skill 4'
     },
     'MEMBER5' : {
-      'ROLESHORT' : 'ROLE SHORT',
-      'ROLE' : 'Role 5',
+      'ROLESHORT' : 'Autonomous Systems',
+      'ROLE' : 'Autonomous Systems',
       'DESC' : 'Desc 5',
       'SKILL' : 'Skill 5'
     }
@@ -191,15 +191,15 @@ quotesText = {
   },
   'EN': {
     'QUOTE1' : {
-      'TEXT' : 'TEXT 1',
+      'TEXT' : 'If flying a drone stress you out, it\'s probably worth too much',
       'AUTHOR' : 'Simon W. Kirouac'
     },
     'QUOTE2' : {
-      'TEXT' : 'TEXT 2',
+      'TEXT' : 'A simple system is a good system',
       'AUTHOR' : 'Julien Huot'
     },
     'QUOTE3' : {
-      'TEXT' : 'TEXT 3',
+      'TEXT' : 'Taking pictures with a drones, it\'s like taking selfies from real far',
       'AUTHOR' : 'Alexandre Boulay'
     }
   }
@@ -231,26 +231,26 @@ systemText = {
     }
   },
   'EN': {
-    'TITLE' : 'TITLE',
-    'DESC' : 'DESC',
+    'TITLE' : 'Our Systems',
+    'DESC' : 'Simple, Stupid and Efficient',
     'PLANE' : {
-      'TITLE' : 'TITLE',
+      'TITLE' : 'Airplane',
       'DESC' : 'DESC'
     },
     'AUTOPILOT' : {
-      'TITLE' : 'TITLE',
+      'TITLE' : 'Autopilot',
       'DESC' : 'DESC'
     },
     'PAYLOAD' : {
-      'TITLE' : 'TITLE',
+      'TITLE' : 'Payload',
       'DESC' : 'DESC'
     },
     'ANALYSIS' : {
-      'TITLE' : 'TITLE',
+      'TITLE' : 'Analysis',
       'DESC' : 'DESC'
     },
     'PERFORMANCE' : {
-      'TITLE' : 'TITLE',
+      'TITLE' : 'Performance',
       'DESC' : 'DESC'
     }
   }
@@ -263,9 +263,9 @@ competitionText = {
     'DESC2' : 'La compétition est séparée en deux parties. La première consiste à la production d\'un rapport technique avant le 11 janvier 2015 et la deuxième partie consiste en une démonstration opérationnelle à Alma le 1-3 mai 2015'
   },
   'EN': {
-    'TITLE' : 'TITLE',
-    'DESC1' : 'DESC 1',
-    'DESC2' : 'DESC 2'
+    'TITLE' : 'Canadian Competition',
+    'DESC1' : 'The goal of this competition is to promote the growth of the Canadian unmanned vehicule systems using real commercial challenges',
+    'DESC2' : 'There are two parts to the competition. The first one is to write a technical report and the second one is to demonstrate the system in a real life simulation that will be in Alma on May 1st to 3rd 2015'
   }
 };
 
@@ -275,8 +275,8 @@ partnersText = {
     'DESC' : 'C\'est grâce à nos partenaires ci-dessous que nous pouvons réaliser ce projet!'
   },
   'EN': {
-    'TITLE' : 'TITLE',
-    'DESC' : 'DESC 1'
+    'TITLE' : 'Our Partners',
+    'DESC' : 'Without them, this project could not be possible!'
   }
 };
 
@@ -299,13 +299,17 @@ sposorsPlan = {
     'ITEMS' : {
       'ITEM1' : 'Logo sur le site web',
       'ITEM2' : 'Logo sur documents promotionnels',
-      'ITEM3' : 'Logo sur vêtements d’équipe',
-      'ITEM4' : 'Logo sur l’avion'
+      'ITEM3' : 'Logo en petit sur vêtements d’équipe',
+      'ITEM4' : 'Logo en petit sur l’avion',
+      'ITEM5' : 'Logo sur vêtements d’équipe',
+      'ITEM6' : 'Logo sur l’avion',
+      'ITEM7' : 'Logo en grand sur vêtements d’équipe',
+      'ITEM8' : 'Logo en grand sur l’avion'
     }
   },
   'EN': {
-    'TITLE' : 'TITLE',
-    'DESC' : 'DESC',
+    'TITLE' : 'Sponsorship Plan',
+    'DESC' : 'A projet of this size needs lots of ressources!',
     'BRONZE' : {
       'PRICE' : '500 $',
       'NAME' : 'Bronze'
@@ -319,10 +323,14 @@ sposorsPlan = {
       'NAME' : 'Gold'
     },
     'ITEMS' : {
-      'ITEM1' : 'ITEM 1',
-      'ITEM2' : 'ITEM 2',
-      'ITEM3' : 'ITEM 3',
-      'ITEM4' : 'ITEM 4'
+      'ITEM1' : 'Logo on website',
+      'ITEM2' : 'Logo on official documents',
+      'ITEM3' : 'Small logo on team outfits',
+      'ITEM4' : 'Small logo on the UAV',
+      'ITEM5' : 'Logo on team outfits',
+      'ITEM6' : 'Logo on the UAV',
+      'ITEM7' : 'Big logo on team outfits',
+      'ITEM8' : 'Big logo on the UAV'
     }
   }
 };
@@ -335,8 +343,8 @@ contact = {
     'PHONEDESC' : 'Téléphone'
   },
   'EN': {
-    'TITLE' : 'TITLE',
-    'DESC' : 'DESC',
+    'TITLE' : 'Contact us',
+    'DESC' : 'Send us messages! We read all of them',
     'EMAILDESC' : 'Email',
     'PHONEDESC' : 'Phone'
   }
