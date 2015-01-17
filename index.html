@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="fr" ng-app="kissApp">
 
 <head>
 
@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body ng-controller="Ctrl">
 
 <div class="site-loader"></div>
 
@@ -54,7 +54,7 @@
 						<div class="col-md-12">
 
 							<div class="splash-text">
-								<h1 class="splash-headline">Projet Simplicité</h1>
+								<h1 class="splash-headline">{{ 'TITLE' | translate }}</h1>
 								<div class="splash-description">
 									<p>
                                       <span class="text-primary">K</span>eep 
@@ -103,13 +103,15 @@
 					<div class="header-col main-nav">
 						<a href="#" class="nav-toggle"></a>
 						<ul class="nav">
-						  <li><a href="#">Accueil</a></li>
-						  <li><a href="#about">Projet</a></li>
-						  <li><a href="#equipe">Notre Équipe</a></li>
-                          <li><a href="#services">Système</a></li>
-                          <li><a href="#competition">Compétition</a></li>
-                          <li><a href="#work">Partenaires</a></li>
-						  <li><a href="#contact">Nous joindre</a></li>
+						  <li><a href="#">{{ 'MENU.ACCUEIL' | translate }}</a></li>
+						  <li><a href="#about">{{ 'MENU.PROJET' | translate }}</a></li>
+						  <li><a href="#equipe">{{ 'MENU.EQUIPE' | translate }}</a></li>
+                          <li><a href="#services">{{ 'MENU.SYSTEM' | translate }}</a></li>
+                          <li><a href="#competition">{{ 'MENU.COMPETITION' | translate }}</a></li>
+                          <li><a href="#work">{{ 'MENU.PARTENAIRES' | translate }}</a></li>
+						  <li><a href="#contact">{{ 'MENU.CONTACT' | translate }}</a></li>
+                          <li><a href="" ng-click="changeLanguage('fr')">FR</a></li>
+                          <li><a href="" ng-click="changeLanguage('en')">EN</a></li>
 						</ul>
 					</nav>
 
@@ -153,7 +155,7 @@
 									<div class="col-md-12">
 
 										<p class="lead">
-											K.I.S.S. de l'Université de Sherbrooke est un projet étudiant d’aéronautique et d’avionique qui a pour but de participer à la compétition canadienne de drones autopilotés avec un système simple et efficace
+											{{ 'PROJECT.DESC' | translate }}
 										</p>
 
 									</div>
@@ -169,8 +171,8 @@
 												<i class="gi gi-magic"></i>
 											</div>
 											<div class="info">
-												<h4>Une équipe expérimentée</h4>
-												<p>L'équipe est constituée d'étudiants d'ingénierie finissants de l'Université de Sherbrooke qui ont participé au projet <a href="http://www.vamudes.ca/">VAMUdeS</a>.</p>
+												<h4>{{ 'PROJECT.SECTION1.TITLE' | translate }}</h4>
+												<p>{{ 'PROJECT.SECTION1.DESC' | translate }}</p>
 											</div>
 										</div>
 
@@ -183,8 +185,8 @@
 												<i class="gi gi-cup"></i>
 											</div>
 											<div class="info">
-												<h4>Un système simple</h4>
-												<p>Le groupe a pour but de simplifier la conception et réduire les risques d'erreurs en intégrant des produits fiables et disponibles sur le marché.</p>
+												<h4>{{ 'PROJECT.SECTION2.TITLE' | translate }}</h4>
+												<p>{{ 'PROJECT.SECTION2.DESC' | translate }}</p>
 											</div>
 										</div>
 
@@ -201,8 +203,8 @@
 												<i class="gi gi-heart"></i>
 											</div>
 											<div class="info">
-												<h4>Fait avec passion</h4>
-												<p>Le projet est propulsé par amour pour l'ingénierie et le développement de véhicules autonomes aériens</p>
+												<h4>{{ 'PROJECT.SECTION3.TITLE' | translate }}</h4>
+												<p>{{ 'PROJECT.SECTION3.DESC' | translate }}</p>
 											</div>
 										</div>
 
@@ -215,8 +217,8 @@
 												<i class="gi gi-life-preserver"></i>
 											</div>
 											<div class="info">
-												<h4>Des partenaires exemplaires</h4>
-												<p>La réalisation de ce véhicule est uniquement possible grâce à l'intérêt et à la générosité que portent nos commanditaires</p>
+												<h4>{{ 'PROJECT.SECTION4.TITLE' | translate }}</h4>
+												<p>{{ 'PROJECT.SECTION4.DESC' | translate }}</p>
 											</div>
 										</div>
 
@@ -246,7 +248,7 @@
 							<div class="col-md-12">
 
 								<h2 class="section-separator-title">
-									<span data-shadow-text="Notre Équipe">Notre Équipe</span>
+									<span data-shadow-text="{{ 'TEAM.TITLE' | translate }}">{{ 'TEAM.TITLE' | translate }}</span>
 								</h2>
 
 							</div>
@@ -256,9 +258,7 @@
 						<div class="row">
 
 							<div class="col-md-10 col-md-push-1">
-								<p class="lead">
-									Le groupe est constitué d'étudiants en génie mécanique, électrique et informatique. Chaque membre de l'équipe joue un rôle essentiel à la réussite du projet
-								</p>
+								<p class="lead"> {{ 'TEAM.DESC' | translate }}</p>
 							</div>
 
 						</div>
@@ -282,12 +282,12 @@
 
 									<div class="team-info">
 										<h4 class="team-name">Jacob Deschamps</h4>
-										<p class="team-role">Capitaine</p>
+										<p class="team-role">{{ 'TEAM.MEMBER1.ROLESHORT' | translate }}</p>
 									</div>
 
-									<div class="team-data" data-name="Jacob Deschamps" data-role="Capitaine" data-photo="assets/img/Jacob.png">
-										<p>Étudiant en Génie électrique de la 57e promotion, Jacob a été impliqué dans le développement de drones à l'Université de Sherbrooke pour plus de 2 ans où il a récolté de nombreuses victoires. Il a également participé au UAV Outback Challenge en Australie</p>
-										<p>Il peut faire des PCBs plus vite que son ombre</p>
+									<div class="team-data" data-name="Jacob Deschamps" data-role="{{ 'TEAM.MEMBER1.ROLE' | translate }}" data-photo="assets/img/Jacob.png">
+										<p>{{ 'TEAM.MEMBER1.DESC' | translate }}</p>
+										<p>{{ 'TEAM.MEMBER1.SKILL' | translate }}</p>
 
 										<div class="spacer-60 bordered"></div>
 
@@ -319,12 +319,12 @@
 
 									<div class="team-info">
 										<h4 class="team-name">Alexandre Boulay</h4>
-										<p class="team-role">Imagerie</p>
+										<p class="team-role">{{ 'TEAM.MEMBER2.ROLESHORT' | translate }}</p>
 									</div>
 
-									<div class="team-data" data-name="Alexandre Boulay" data-role="Spécialiste Charge Utile" data-photo="assets/img/Alexandre.png">
-										<p>Étudiant en Génie informatique de la 56e promotion, il est passionné par tous les projets techniques. Il a été pendant plusieurs années dans le groupe de drones de l'Université de Sherbrooke où son savoir-faire leur a permis de développer un système d'imagerie révolutionnaire avec lequel il a gagné de nombreux prix</p>
-										<p>Il crée des applications mobiles sans les mains</p>
+									<div class="team-data" data-name="Alexandre Boulay" data-role="{{ 'TEAM.MEMBER2.ROLE' | translate }}" data-photo="assets/img/Alexandre.png">
+										<p>{{ 'TEAM.MEMBER2.DESC' | translate }}</p>
+										<p>{{ 'TEAM.MEMBER2.SKILL' | translate }}</p>
 
 										<div class="spacer-60 bordered"></div>
 
@@ -357,12 +357,12 @@
 
 									<div class="team-info">
 										<h4 class="team-name">Julien Huot</h4>
-										<p class="team-role">Cartographie</p>
+										<p class="team-role">{{ 'TEAM.MEMBER3.ROLESHORT' | translate }}</p>
 									</div>
 
-									<div class="team-data" data-name="Julien Huot" data-role="Spécialiste en cartographie" data-photo="assets/img/Julien.png">
-										<p>Étudiant en Génie informatique de la 57e promotion, il a fait des drones à l'Université Laval avant de rejoindre le groupe de l'Université de Sherbrooke et d'y gagner les compétitions AUVSI et USC. Il a même géré le groupe qui a participé au UAV Outback Challenge</p>
-										<p>Oui, il a vraiment un baccalauréat en physique</p>
+									<div class="team-data" data-name="Julien Huot" data-role="{{ 'TEAM.MEMBER3.ROLE' | translate }}" data-photo="assets/img/Julien.png">
+										<p>{{ 'TEAM.MEMBER3.DESC' | translate }}</p>
+										<p>{{ 'TEAM.MEMBER3.SKILL' | translate }}</p>
 
 										<div class="spacer-60 bordered"></div>
 
@@ -394,12 +394,12 @@
 
 									<div class="team-info">
 										<h4 class="team-name">Vincent R. Turgeon</h4>
-										<p class="team-role">Aéronautique</p>
+										<p class="team-role">{{ 'TEAM.MEMBER4.ROLESHORT' | translate }}</p>
 									</div>
 
-									<div class="team-data" data-name="Vincent R. Turgeon" data-role="Spécialiste en Aéronautique" data-photo="assets/img/Vincent.png">
-										<p>Étudiant en Génie mécanique de la 57e promotion, il a créé les 2 dernières générations de drones de l'Université de Sherbrooke. Son implication et les performances de ses avions ont apporté l'Université vers des nouveaux sommets. Dans ses temps libres, il apprend à piloter avec les Forces canadiennes</p>
-										<p>Il transforme le duct-tape et la colle en portance</p>
+									<div class="team-data" data-name="Vincent R. Turgeon" data-role="{{ 'TEAM.MEMBER4.ROLESHORT' | translate }}" data-photo="assets/img/Vincent.png">
+										<p>{{ 'TEAM.MEMBER4.DESC' | translate }}</p>
+										<p>{{ 'TEAM.MEMBER4.SKILL' | translate }}</p>
 
 										<div class="spacer-60 bordered"></div>
 
@@ -431,12 +431,12 @@
 
 									<div class="team-info">
 										<h4 class="team-name">Simon W. Kirouac</h4>
-										<p class="team-role">Systèmes Autonomes</p>
+										<p class="team-role">{{ 'TEAM.MEMBER5.ROLESHORT' | translate }}</p>
 									</div>
 
-									<div class="team-data" data-name="Simon W. Kirouac" data-role="Spécialiste en Systèmes Autonomes" data-photo="assets/img/Simon.png">
-										<p>Étudiant en Génie informatique de la 56e promotion, il a été responsable des systèmes autonomes du groupe de drones de l'Université de Sherbrooke pendant plus de 3 ans. Il a remporté la compétition AUVSI et réalisé un tour du chapeau à la compétition USC.</p>
-										<p>Il peut piloter un drone les yeux fermés</p>
+									<div class="team-data" data-name="Simon W. Kirouac" data-role="{{ 'TEAM.MEMBER5.ROLESHORT' | translate }}" data-photo="assets/img/Simon.png">
+										<p>{{ 'TEAM.MEMBER5.DESC' | translate }}</p>
+										<p>{{ 'TEAM.MEMBER5.SKILL' | translate }}</p>
 										
 										<div class="spacer-60 bordered"></div>
 
@@ -478,22 +478,22 @@
 
 									<div class="testimonial">
 										<blockquote>
-											<p>Si voler un drone vous stresse, c'est qu'il vaut trop cher.</p>
-											<small>Simon W. Kirouac </small>
+											<p>{{ 'QUOTES.QUOTE1.TEXT' | translate }}</p>
+											<small>{{ 'QUOTES.QUOTE1.AUTHOR' | translate }}</small>
 										</blockquote>
 									</div>
 
 									<div class="testimonial">
 										<blockquote>
-											<p>Un système simple est un bon système.</p>
-											<small>Julien Huot </small>
+											<p>{{ 'QUOTES.QUOTE2.TEXT' | translate }}</p>
+											<small>{{ 'QUOTES.QUOTE2.AUTHOR' | translate }}</small>
 										</blockquote>
 									</div>
 
 									<div class="testimonial">
 										<blockquote>
-											<p>Voler un drone, c'est prendre des selfies de vraiment loin.</p>
-											<small>Alexandre Boulay </small>
+											<p>{{ 'QUOTES.QUOTE3.TEXT' | translate }}</p>
+											<small>{{ 'QUOTES.QUOTE3.AUTHOR' | translate }}</small>
 										</blockquote>
 									</div>
 
@@ -526,8 +526,8 @@
 							<div class="col-lg-12">
 
 								<h1 class="section-title">
-									Notre Système
-									<small>Simple, stupide et efficace</small>
+									{{ 'SYSTEM.TITLE' | translate }}
+									<small>{{ 'SYSTEM.DESC' | translate }}</small>
 								</h1>
 
 							</div>
@@ -545,10 +545,8 @@
 										<i class="gi gi-send shadow-icon" data-animation-name="fadeInLeft" data-animation-delay="0"></i>
 									</div>
 									<div class="service-info">
-										<h4 class="service-name">Avion</h4>
-										<p class="service-description">
-											En utilisant un petit avion commercial en foam, les décollages et les atterrissages en sont de beaucoup simplifiés. De plus, le foam facilite de beaucoup la modification et la réparation du fuselage. Ces avions sont peu coûteux et rapidement disponibles
-										</p>
+										<h4 class="service-name">{{ 'SYSTEM.PLANE.TITLE' | translate }}</h4>
+										<p class="service-description">{{ 'SYSTEM.PLANE.DESC' | translate }}</p>
 									</div>
 
 								</div>
@@ -564,10 +562,8 @@
 										<i class="gi gi-tablet shadow-icon" data-animation-name="fadeInLeft" data-animation-delay="0"></i>
 									</div>
 									<div class="service-info">
-										<h4 class="service-name">Autopilote</h4>
-										<p class="service-description">
-											Il y a suffisamment d'autopilote Open Source pour ne pas avoir à en refaire un nouveau. Les communautés travaillant sur ces projets sont également d'une grande aide en cas de problème. Les composantes sont généralement peu coûteuses tout en gardant la fiabilité des solutions commerciales
-										</p>
+										<h4 class="service-name">{{ 'SYSTEM.AUTOPILOT.TITLE' | translate }}</h4>
+										<p class="service-description">{{ 'SYSTEM.AUTOPILOT.DESC' | translate }}</p>
 									</div>
 
 								</div>
@@ -583,10 +579,8 @@
 										<i class="gi gi-camera shadow-icon" data-animation-name="fadeInLeft" data-animation-delay="0"></i>
 									</div>
 									<div class="service-info">
-										<h4 class="service-name">Charge Utile</h4>
-										<p class="service-description">
-											Les téléphones cellulaires sont suffisamment performants pour prendre des photos de très bonne résolution, les géolocaliser grâce au GPS intégré et les transmettre rapidement grâce à la connectivité 3G et WiFi. Ils sont également robustes et beaucoup moins dispendieux que les caméras professionnelles
-										</p>
+										<h4 class="service-name">{{ 'SYSTEM.PAYLOAD.TITLE' | translate }}</h4>
+										<p class="service-description">{{ 'SYSTEM.PAYLOAD.DESC' | translate }}</p>
 									</div>
 
 								</div>
@@ -608,10 +602,8 @@
 										<i class="gi gi-server shadow-icon" data-animation-name="fadeInLeft" data-animation-delay="0"></i>
 									</div>
 									<div class="service-info">
-										<h4 class="service-name">Analyse</h4>
-										<p class="service-description">
-											L'analyse au sol des images est réalisée par le logiciel d'Agisoft. Celui-ci permet de facilement combiner les photos tout en améliorant la précision de chacune. L'utilisation est simple et peu coûteuse
-										</p>
+										<h4 class="service-name">{{ 'SYSTEM.ANALYSIS.TITLE' | translate }}</h4>
+										<p class="service-description">{{ 'SYSTEM.ANALYSIS.DESC' | translate }}</p>
 									</div>
 
 								</div>
@@ -627,10 +619,8 @@
 										<i class="gi gi-dashboard shadow-icon" data-animation-name="fadeInLeft" data-animation-delay="0"></i>
 									</div>
 									<div class="service-info">
-										<h4 class="service-name">Performance</h4>
-										<p class="service-description">
-											La simplicité du système réduit les risques dans la phase d'intégration des multiples systèmes. Les séances de tests en sont grandement simplifiées et le système peu coûteux permet d'avoir plusieurs systèmes fonctionnels en même temps. Le drone est également simple à comprendre et à utiliser pour des novices
-										</p>
+										<h4 class="service-name">{{ 'SYSTEM.PERFORMANCE.TITLE' | translate }}</h4>
+										<p class="service-description">{{ 'SYSTEM.PERFORMANCE.DESC' | translate }}</p>
 									</div>
 
 								</div>
@@ -659,13 +649,12 @@
 
 					<div class="col-md-6">
 						<hgroup>
-							<h4 class="text-primary text-uppercase">Compétition canadienne</h4>
+							<h4 class="text-primary text-uppercase">{{ 'COMPETITION.TITLE' | translate }}</h4>
 							<h2 class="text-highlight text-uppercase half-margin-bottom">USC 2015</h2>
 						</hgroup>
 
-						<p>Le but de la compétition est de promouvoir et de développer l'expertise canadienne dans le développement de systèmes autonomes aériens</p>
-						<p>La compétition est séparée en deux parties. La première consiste à la production d'un rapport technique avant le 11 janvier 2015 et la deuxième partie consiste en une démonstration opérationnelle à Alma le 1-3 mai 2015
-</p>
+						<p>{{ 'COMPETITION.DESC1' | translate }}</p>
+						<p>{{ 'COMPETITION.DESC2' | translate }}</p>
 
 						<div class="spacer-20 hidden-md hidden-lg"></div>
 					</div>
@@ -697,12 +686,10 @@ s
 							<div class="col-md-12">
 
 								<h2 class="section-separator-title separator-align-left">
-									<span data-shadow-text="Nos Partenaires">Nos Partenaires</span>
+									<span data-shadow-text="{{ 'PARTNERS.TITLE' | translate }}">{{ 'PARTNERS.TITLE' | translate }}</span>
 								</h2>
 
-								<p class="lead">
-									C'est grâce à nos partenaires ci-dessous que nous pouvons réaliser ce projet!
-								</p>
+								<p class="lead">{{ 'PARTNERS.DESC' | translate }}</p>
 
 								<div class="client-list">
 
@@ -724,8 +711,8 @@ s
 
 											<div class="client-logo" data-animation-name="fadeInUp">
 												<div class="logo">
-													<a href="#">
-														<img src="assets/img/kissus_bw-medium.png" alt="Gilette">
+													<a href="http://www.cmcelectronics.ca/">
+														<img src="assets/img/cmc.png" alt="Gilette">
 													</a>
 												</div>
 											</div>
@@ -736,8 +723,8 @@ s
 
 											<div class="client-logo" data-animation-name="fadeInUp">
 												<div class="logo">
-													<a href="#">
-														<img src="assets/img/kissus_bw-medium.png" alt="Samsung">
+													<a href="http://www.ferique.com">
+														<img src="assets/img/gestionFerique.png" alt="Samsung">
 													</a>
 												</div>
 											</div>
@@ -857,8 +844,8 @@ s
 							<div class="col-lg-12">
 
 								<h1 class="section-title">
-									Plan de commandites
-									<small>Un projet de cette envergure nécessite d’importantes ressources techniques, matérielles et financières</small>
+									{{ 'SPONSORSPLAN.TITLE' | translate }}
+									<small>{{ 'SPONSORSPLAN.DESC' | translate }}</small>
 								</h1>
 
 							</div>
@@ -871,15 +858,15 @@ s
 
 								<div class="pricing-table" data-animation-name="flipInY">
 									<h2 class="price">
-										500 $
+										{{ 'SPONSORSPLAN.BRONZE.PRICE' | translate }}
 									</h2>
-									<h5 class="name">Bronze</h5>
+									<h5 class="name">{{ 'SPONSORSPLAN.BRONZE.NAME' | translate }}</h5>
 									<div class="features">
 										<ul>
-											<li><span>Logo</span> sur le site web</li>
-											<li><span>Logo</span> sur les documents promotionnels</li>
-											<li><span>Logo</span> sur les vêtements d'équipe</li>
-											<li>-</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM1' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM2' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM3' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM4' | translate }}</li>
 										</ul>
 									</div>
 									<a href="#" class="btn btn-sm btn-primary btn-block">Nous joindre</a>
@@ -891,15 +878,15 @@ s
 
 								<div class="pricing-table featured" data-animation-name="flipInY">
 									<h2 class="price">
-										1000 $
+										{{ 'SPONSORSPLAN.SILVER.PRICE' | translate }}
 									</h2>
-									<h5 class="name">Argent</h5>
+									<h5 class="name">{{ 'SPONSORSPLAN.SILVER.NAME' | translate }}</h5>
 									<div class="features">
 										<ul>
-											<li><span>Logo</span> sur le site web</li>
-											<li><span>Logo</span> sur les documents promotionnels</li>
-											<li><span>Logo</span> sur les vêtements d’équipe</li>
-											<li><span>Logo</span> en petit sur l'avion</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM1' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM2' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM5' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM6' | translate }}</li>
 										</ul>
 									</div>
 									<a href="#" class="btn btn-sm btn-primary btn-block">Nous joindre</a>
@@ -911,15 +898,15 @@ s
 
 								<div class="pricing-table" data-animation-name="flipInY">
 									<h2 class="price">
-										1500 $
+										{{ 'SPONSORSPLAN.GOLD.PRICE' | translate }}
 									</h2>
-									<h5 class="name">Or</h5>
+									<h5 class="name">{{ 'SPONSORSPLAN.GOLD.NAME' | translate }}</h5>
 									<div class="features">
 										<ul>
-											<li><span>Logo</span> sur le site web</li>
-											<li><span>Logo</span> sur les documents promotionnels</li>
-											<li><span>Logo</span> en gros sur les vêtements d’équipe</li>
-											<li><span>Logo</span> en gros sur l’avion</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM1' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM2' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM7' | translate }}</li>
+											<li>{{ 'SPONSORSPLAN.ITEMS.ITEM8' | translate }}</li>
 										</ul>
 									</div>
 									<a href="#" class="btn btn-sm btn-primary btn-block">Nous joindre</a>
@@ -950,8 +937,8 @@ s
 							<div class="col-lg-12">
 
 								<h1 class="section-title">
-									Nous joindre
-									<small>N'hésitez pas à nous contacter!</small>
+									{{ 'CONTACT.TITLE' | translate }}
+									<small>{{ 'CONTACT.DESC' | translate }}</small>
 								</h1>
 
 							</div>
@@ -972,8 +959,8 @@ s
 
 							<div class="col-md-6">
 								<p class="lead">
-									<strong class="text-semibold">Courriel:</strong> Jacob.Deschamps@USherbrooke.ca<br>
-									<strong class="text-semibold">Téléphone:</strong> 1 855 854-7787
+									<strong class="text-semibold">{{ 'CONTACT.EMAILDESC' | translate }}:</strong> Jacob.Deschamps@USherbrooke.ca<br>
+									<strong class="text-semibold">{{ 'CONTACT.PHONEDESC' | translate }}:</strong> 1 855 854-7787
 								</p>
 							</div>
 							
@@ -1047,6 +1034,10 @@ s
 <script type="text/javascript" src="assets/js/hydrogen.setup.min.js"></script>
 <script type="text/javascript" src="assets/js/hydrogen.scripts.min.js"></script>
 <script type="text/javascript" src="assets/js/hydrogen.plugins.js"></script>
+
+<script type="text/javascript" src="assets/js/angular.min.js"></script>
+<script type="text/javascript" src="assets/js/angular-translate.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
 
 <script type="text/javascript" src="assets/plugins/royalslider/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="assets/plugins/mfp/jquery.mfp-0.9.9.min.js"></script>
